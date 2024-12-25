@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #D9EAFD;
+  text-align: center;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  
+}
+
+h1{
+  font-size: 10vmin;
+  position: absolute;
+  top: 1rem;
+}
+
+.game {
+  height: 54vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* gap: 1.5vmin; */
+  margin-top: 4rem;
+}
+
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  /* border-radius: 1rem; */
+  border: none;
+  /* box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3); */
+  font-size: 10vmin;
+  color: #b0413e;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#left-top{
+  border-right: 4px solid black;
+  border-bottom: 4px solid black;
+}
+
+#left-mid{
+  border-right: 4px solid black;
+}
+
+#left-bottom{
+  border-right: 4px solid black;
+  border-top: 4px solid black;
+}
+
+#right-top{
+  border-left: 4px solid black;
+  border-bottom: 4px solid black;
+}
+
+#right-mid{
+  border-left: 4px solid black;
+}
+
+#right-bottom{
+  border-left: 4px solid black;
+  border-top: 4px solid black;
+}
+
+#mid-top{
+  border-bottom: 4px solid black;
+}
+
+#mid-bottom{
+  border-top: 4px solid black;
+}
+
+
+
+#reset-btn {
+  padding: 2.5vmin 3vmin;
+  font-size: 3vmin;
+  text-transform: uppercase;
+  background-color: #3d5a76;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+#new-btn {
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #3d5a76;
+  color: #fff;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+#msg {
+  color: black;
+  font-size: 5vmin;
+}
+
+.msg-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #D9EAFD;
+  gap: 4rem;
+  animation: slide-in 0.8s ease-in-out;
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width:400px) {
+  .game {
+    margin-top: 0rem;
+  }
+
+  #reset-btn {
+    padding: 4vmin 4.5vmin;
+    font-size: 4vmin;
+  }
+
+  .box {
+    height: 24vmin;
+    width: 24vmin;
+  }
+
+  .game {
+    height: 71vmin;
+    width: 77vmin;
+  }
+
+  .container {
+    gap: 4rem;
+  }
+
+}
+
